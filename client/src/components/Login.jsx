@@ -101,7 +101,7 @@ function Login() {
           className="absolute left-[80px] top-[80px]"
         />
         <img
-          src="//Group5.svg"
+          src="/Group5.svg"
           className="absolute left-[180px] top-[190px]"
         />
         <img

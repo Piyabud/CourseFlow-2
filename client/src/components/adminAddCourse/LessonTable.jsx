@@ -90,11 +90,11 @@ function LessonTable() {
                     className="btn cursor-pointer"
                     onClick={() => handleDelete(index, data.lessonName)}
                   >
-                    <img src="../../../public/image/delete.svg" alt="" />
+                    <img src="/image/delete.svg" alt="" />
                   </button>
                   <Link to={`/admin/addcourse/editlesson/${index}`}>
                     <button className="btn cursor-pointer">
-                      <img src="../../../public/image/edit.svg" alt="Edit" />
+                      <img src="/image/edit.svg" alt="Edit" />
                     </button>
                   </Link>
                 </div>

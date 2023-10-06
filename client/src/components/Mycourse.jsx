@@ -60,7 +60,7 @@ function MyCourse() {
   const userId = userIdFromCookie
   useEffect(() => {
     // try {
-    //   fetch(`http://localhost:4000/mycourse/${userIdFromCookie}`)
+    //   fetch(`https://courseflow-production.up.railway.app/mycourse/${userIdFromCookie}`)
     //     .then((response) => response.json())
     //     .then((json) => {
     //       console.log(json.data);
@@ -86,7 +86,7 @@ function MyCourse() {
     try {
       setIsLoading(true)
       const result = await axios.get(
-        `http://localhost:4000/mycourse/${userIdFromCookie}`
+        `https://courseflow-production.up.railway.app/mycourse/${userIdFromCookie}`
       )
 
       const newDataCourse = result.data.data
@@ -144,7 +144,7 @@ function MyCourse() {
       localStorage.removeItem('nonepause')
       localStorage.removeItem('videoKey')
 
-      const result = await axios.get('http://localhost:4000/learn/videotime', {
+      const result = await axios.get('https://courseflow-production.up.railway.app/learn/videotime', {
         params: {
           userID: userId,
           courseID: localStorage.getItem('course_id'),

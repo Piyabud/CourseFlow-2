@@ -234,7 +234,7 @@ function AdminAddCourse() {
     }
     try {
       const result = await axios.post(
-        `http://localhost:4000/admin/addcourse`,
+        `https://courseflow-production.up.railway.app/admin/addcourse`,
         formData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       )

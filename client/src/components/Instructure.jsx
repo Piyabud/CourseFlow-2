@@ -696,7 +696,7 @@ function Instructure() {
           <div className='inline-flex flex-col gap-[120px]'>
             <div className='flex flex-start gap-[119px]'>
               <img
-                src='../public/image/Frame427320903(1).png'
+                src='/image/Frame427320903(1).png'
                 className='hover-scale'
                 alt=''
               />
@@ -823,7 +823,7 @@ function Instructure() {
                 </div>
               </div>
               <img
-                src='../public/image/Frame427320903.jpg'
+                src='/image/Frame427320903.jpg'
                 alt='other photo'
                 className='w-[454px] h-[330px] hover-scale'
               />
@@ -848,21 +848,21 @@ function Instructure() {
             <h1 className='H2 text-center'>Our Professional Intructor</h1>
             <div className='flex gap-[24px] '>
               <div className='flex flex-col gap-[24px] hover-scale'>
-                <img src='../../public/image/Frame 427320910.png' alt='' />
+                <img src='/image/Frame 427320910.png' alt='' />
                 <div className='text-center'>
                   <h1 className='H3'>Jane Cooper</h1>
                   <p className='body2 text-[--blue400]'>UX/UI Designer</p>
                 </div>
               </div>
               <div className='flex flex-col gap-[24px] hover-scale'>
-                <img src='../../public/image/Frame 427320911.png' alt='' />
+                <img src='/image/Frame 427320911.png' alt='' />
                 <div className='text-center'>
                   <h1 className='H3'>Esther Howard</h1>
                   <p className='body2 text-[--blue400]'>Program Manager</p>
                 </div>
               </div>
               <div className='flex flex-col gap-[24px] hover-scale'>
-                <img src='../../public/image/Frame 427320912.png' alt='' />
+                <img src='/image/Frame 427320912.png' alt='' />
                 <div className='text-center'>
                   <h1 className='H3'>Brooklyn Simmons</h1>
                   <p className='body2 text-[--blue400]'>Software Engineer</p>
@@ -970,7 +970,7 @@ function Instructure() {
                     </svg>
                     <div className='flex justify-center items-center w-[200px] h-[240px] overflow-hidden'>
                       <img
-                        src='../../public/image/carosel1.png'
+                        src='/image/carosel1.png'
                         alt=''
                         className='min-w-full min-h-full'
                       />
@@ -1024,7 +1024,7 @@ function Instructure() {
                     </svg>
                     <div className='flex justify-center items-center w-[200px] h-[240px] overflow-hidden'>
                       <img
-                        src='../../public/image/carosel2.png'
+                        src='/image/carosel2.png'
                         alt=''
                         className='min-w-full min-h-full'
                       />
@@ -1078,7 +1078,7 @@ function Instructure() {
                     </svg>
                     <div className='flex justify-center items-center w-[200px] h-[240px] overflow-hidden'>
                       <img
-                        src='../../public/image/carosel3.png'
+                        src='/image/carosel3.png'
                         alt=''
                         className='min-w-full min-h-full'
                       />

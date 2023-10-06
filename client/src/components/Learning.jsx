@@ -50,7 +50,7 @@ function Learning() {
 
   const getStatus = async () => {
     try {
-      const result = await axios.get("http://localhost:4000/learn/status/", {
+      const result = await axios.get("https://courseflow-production.up.railway.app/learn/status/", {
         params: {
           userID: userId,
           courseID: localStorage.getItem("course_id"),
@@ -150,7 +150,7 @@ function Learning() {
     );
     try {
       await axios.put(
-        `http://localhost:4000/learn/start?userID=${userId}&sublessonID=${localStorage.getItem(
+        `https://courseflow-production.up.railway.app/learn/start?userID=${userId}&sublessonID=${localStorage.getItem(
           "videoKey"
         )}`
       );
@@ -165,7 +165,7 @@ function Learning() {
   };
 
   const handlePause = async (a) => {
-    await axios.put("http://localhost:4000/learn/videotime", {
+    await axios.put("https://courseflow-production.up.railway.app/learn/videotime", {
       sublesson_video_timestop: a,
       sublesson_id: localStorage.getItem("videoKey"),
       user_Id: userId,
@@ -176,7 +176,7 @@ function Learning() {
 
   const fetchPauseTime = async () => {
     const result = await axios.get(
-      `http://localhost:4000/learn/videotimebyid?sublessonid=${videoKey}&userid=${userId}`
+      `https://courseflow-production.up.railway.app/learn/videotimebyid?sublessonid=${videoKey}&userid=${userId}`
     );
 
     if (result.data.data[0].sublesson_video_timestop !== null) {
@@ -193,16 +193,16 @@ function Learning() {
     const sublessonID = localStorage.getItem("videoKey") || videoKey;
 
     const result = await axios.get(
-      `http://localhost:4000/assignment/check?sublessonId=${sublessonID}`
+      `https://courseflow-production.up.railway.app/assignment/check?sublessonId=${sublessonID}`
     );
     if (result.data.data.length === 0) {
       await axios.put(
-        `http://localhost:4000/learn/complete?userID=${userId}&sublessonID=${sublessonID}`
+        `https://courseflow-production.up.railway.app/learn/complete?userID=${userId}&sublessonID=${sublessonID}`
       );
       const newStatus = { ...subStatus };
       newStatus[videoKey] = "complete";
       setSubStatus(newStatus);
-      const result = await axios.get("http://localhost:4000/learn/status/", {
+      const result = await axios.get("https://courseflow-production.up.railway.app/learn/status/", {
         params: {
           userID: userId,
           courseID: localStorage.getItem("course_id"),
@@ -216,7 +216,7 @@ function Learning() {
           course_id: localStorage.getItem("course_id"),
         };
         await axios.post(
-          "http://localhost:4000/learn/status/",
+          "https://courseflow-production.up.railway.app/learn/status/",
           statusCompleteBody
         );
       }
@@ -225,10 +225,10 @@ function Learning() {
     //have assignment
     else {
       const response = await axios.get(
-        `http://localhost:4000/assignment/${userId}?sublessonid=${sublessonID}`
+        `https://courseflow-production.up.railway.app/assignment/${userId}?sublessonid=${sublessonID}`
       );
       if (response.data.data.length === 0) {
-        await axios.post(`http://localhost:4000/assignment/`, {
+        await axios.post(`https://courseflow-production.up.railway.app/assignment/`, {
           user_id: userId,
           sublesson_id: sublessonID,
         });
@@ -242,7 +242,7 @@ function Learning() {
     async function fetchData() {
       setIsLoading(true);
       try {
-        const result = await axios.get("http://localhost:4000/learn/", {
+        const result = await axios.get("https://courseflow-production.up.railway.app/learn/", {
           params: {
             userID: userId,
             courseID: localStorage.getItem("course_id"),
@@ -306,7 +306,7 @@ function Learning() {
         <a
           onClick={() => navigate(-1)}
           className='flex flex-row justify-start items-center px-[8px] py-[4px] gap-[8px] cursor-pointer'>
-          <img src='../../public/image/arrow_back.svg' alt='arrow_back' />
+          <img src='/image/arrow_back.svg' alt='arrow_back' />
           <p className='text-[--blue500] font-[700] text-[16px]'>Back</p>
         </a>
       </div>

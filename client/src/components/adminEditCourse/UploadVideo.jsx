@@ -45,7 +45,7 @@ function UploadVideo(props) {
     props.setGetVideoTrailer("");
     // setVdo("");
     localStorage.removeItem("video_url");
-    // await axios.put(`http://localhost:4000/profile/delete/${userId}`);
+    // await axios.put(`https://courseflow-production.up.railway.app/profile/delete/${userId}`);
   };
 
   function displaySnackbar(message) {
@@ -83,7 +83,7 @@ function UploadVideo(props) {
           {/*---------------------- IMG THUMBNAIL UPLOAD -----------------------*/}
           {!props.getVideoTrailer && !vdoUrl ? (
             <img
-              src="../../../public/image/uploadVdo.svg"
+              src="/image/uploadVdo.svg"
               className="relative w-[358px] h-[358px] object-cover rounded-2xl	"
             />
           ) : null}
@@ -97,7 +97,7 @@ function UploadVideo(props) {
                 height="100%"
                 controls={true}
                 // light={dataDetail.cover_img}
-                playIcon={"../../../public/image/playIcon.svg"}
+                playIcon={"/image/playIcon.svg"}
               />
             </div>
           ) : null}
@@ -110,7 +110,7 @@ function UploadVideo(props) {
                 height="100%"
                 controls={true}
                 // light={dataDetail.cover_img}
-                playIcon={"../../../public/image/playIcon.svg"}
+                playIcon={"/image/playIcon.svg"}
               />
             </div>
           ) : null}
@@ -122,7 +122,7 @@ function UploadVideo(props) {
               onClick={handleRemoveVdo}
             >
               <img
-                src="../../../public/image/closeIcon.svg"
+                src="/image/closeIcon.svg"
                 alt=""
                 className="w-[10px] h-[10px]"
               />

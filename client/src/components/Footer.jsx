@@ -33,21 +33,21 @@ function Footer() {
         <div className="socialMedia">
           <a href="https://www.facebook.com" target="_blank">
             <img
-              src="../../public/image/fbLogo.svg"
+              src="/image/fbLogo.svg"
               alt="fbLogo"
               loading="lazy"
             />
           </a>
           <a href="https://www.instagram.com" target="_blank">
             <img
-              src="../../public/image/igLogo.svg"
+              src="/image/igLogo.svg"
               alt="igLogo"
               loading="lazy"
             />
           </a>
           <a href="https://www.twitter.com" target="_blank">
             <img
-              src="../../public/image/twLogo.svg"
+              src="/image/twLogo.svg"
               alt="twLogo"
               loading="lazy"
             />

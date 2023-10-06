@@ -18,7 +18,7 @@ function OurCourse() {
   async function getDataCourse() {
     try {
       const result = await axios.get(
-        `http://localhost:4000/ourcourse?course=${""}&start=${start}&end=${end}`
+        `https://courseflow-production.up.railway.app/ourcourse?course=${""}&start=${start}&end=${end}`
       );
       setDataCourse(result.data.data);
       setMaxpage(Math.ceil(result.data.count / 9));
@@ -31,7 +31,7 @@ function OurCourse() {
   const getCourseByKeywords = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/ourcourse?course=${searchKey}&start=${start}&end=${end}`
+        `https://courseflow-production.up.railway.app/ourcourse?course=${searchKey}&start=${start}&end=${end}`
       );
       setDataCourse(response.data.data);
       setMaxpage(Math.ceil(response.data.count / 9));
@@ -93,7 +93,7 @@ function OurCourse() {
       <div className="topSection">
         <h2 className="H2">Our Courses</h2>
         <div className="input-container">
-          <img src="../../public/image/search.svg" alt="searchIcon" />
+          <img src="/image/search.svg" alt="searchIcon" />
           <input
             type="text"
             placeholder="Search..."

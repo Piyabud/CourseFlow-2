@@ -5,7 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import SnackBar from "./SnackBar";
-import calendarIcon from "../../public/image/calendarIcon.svg";
+import calendarIcon from "/image/calendarIcon.svg";
 import dayjs from "dayjs";
 import axios from "axios";
 import { useEffect } from "react";
@@ -43,7 +43,7 @@ function Register() {
   const sendRegisterRequest = async () => {
 
     try {
-      const result = await axios.post("http://localhost:4000/auth/register", registerData);
+      const result = await axios.post("https://courseflow-production.up.railway.app/auth/register", registerData);
       if (result.data.error) {
         setOpenSnackBar(false)
         setSnackbarMes(result.data.error)
@@ -156,7 +156,7 @@ function Register() {
                     <div className='text-[#9B2FAC] absolute right-0 -bottom-6'>
                       {errors.name}
                       <img
-                        src='../../public/Exclamation-circle.svg'
+                        src='/Exclamation-circle.svg'
                         className='absolute right-4 -top-10'
                       />
                     </div>}
@@ -220,7 +220,7 @@ function Register() {
                     <div className='text-[#9B2FAC] absolute right-0 -bottom-6'>
                       {errors.eduBg}
                       <img
-                        src='../../public/Exclamation-circle.svg'
+                        src='/Exclamation-circle.svg'
                         className='absolute right-4 -top-10'
                       />
                     </div>
@@ -247,7 +247,7 @@ function Register() {
                     <div className='text-[#9B2FAC] absolute right-0 -bottom-6'>
                       {errors.email}
                       <img
-                        src='../../public/Exclamation-circle.svg'
+                        src='/Exclamation-circle.svg'
                         className='absolute right-4 -top-10'
                       />
                     </div>
@@ -273,7 +273,7 @@ function Register() {
                     <div className='text-[#9B2FAC] absolute right-0 -bottom-6'>
                       {errors.password}
                       <img
-                        src='../../public/Exclamation-circle.svg'
+                        src='/Exclamation-circle.svg'
                         className='absolute right-4 -top-10'
                       />
                     </div>
@@ -302,23 +302,23 @@ function Register() {
         </div>
 
         <img
-          src='../../public/Vector9.svg'
+          src='/Vector9.svg'
           className='absolute left-0 top-[330px]'
         />
         <img
-          src='../../public/Ellipse5.svg'
+          src='/Ellipse5.svg'
           className='absolute left-[80px] top-[80px]'
         />
         <img
-          src='../../public//Group5.svg'
+          src='//Group5.svg'
           className='absolute left-[180px] top-[190px]'
         />
         <img
-          src='../../public/Vector8.svg'
+          src='/Vector8.svg'
           className='absolute right-0 -top-[88px]'
         />
         <img
-          src='../../public/Ellipse4.svg'
+          src='/Ellipse4.svg'
           className='absolute right-[50px] top-[500px]'
         />
       </div>

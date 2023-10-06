@@ -50,7 +50,7 @@ const AssignmentListAdmin = ({
   const fetchData = async (searchQuery) => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/assignment?start=${start}&end=${end}&search=${searchQuery}`
+        `https://courseflow-production.up.railway.app/assignment?start=${start}&end=${end}&search=${searchQuery}`
       );
       setMaxpage(Math.ceil(response.data.count / 8));
       console.log(Math.ceil(response.data.count / 8));

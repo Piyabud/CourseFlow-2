@@ -3,7 +3,7 @@ function NotFoundPage() {
   return (
     <div className='gradient-bg min-h-screen flex flex-col justify-center items-center'>
       <img
-        src='../../public/books.png'
+        src='/books.png'
         alt='Astronaut'
         className='w-32 h-32 mb-4'
       />

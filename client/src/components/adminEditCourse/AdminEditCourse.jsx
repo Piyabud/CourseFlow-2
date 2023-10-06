@@ -147,7 +147,7 @@ function AdminEditCourse() {
     }
     setLoadingMes("Course Upload in Progress...");
     setIsLoading(true);
-    await axios.put(`http://localhost:4000/admin/${courseId}`, formData, {
+    await axios.put(`https://courseflow-production.up.railway.app/admin/${courseId}`, formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
     setIsLoading(false);
@@ -169,7 +169,7 @@ function AdminEditCourse() {
     const courseFetching = async () => {
       try {
         const result = await axios.get(
-          `http://localhost:4000/ourcourse/${courseId}`
+          `https://courseflow-production.up.railway.app/ourcourse/${courseId}`
         );
         console.log(result.data.data);
 

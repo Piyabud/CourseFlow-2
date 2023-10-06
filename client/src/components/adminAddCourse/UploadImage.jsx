@@ -81,7 +81,7 @@ function UploadImage(props) {
           {/*---------------------- IMG THUMBNAIL UPLOAD -----------------------*/}
           {!adminImageUrl ? (
             <img
-              src="../../../public/image/uploadImage.svg"
+              src="/image/uploadImage.svg"
               className="relative bg-[--gray100] w-[358px] h-[358px] object-cover	rounded-2xl"
             />
           ) : null}
@@ -98,7 +98,7 @@ function UploadImage(props) {
               className=" absolute top-0 left-[calc((480px)-2.5rem)] m-[6px] bg-[#9B2FAC] bg-opacity-95 rounded-full w-[30px] h-[30px] border-none cursor-pointer"
               onClick={handleRemoveImage}>
               <img
-                src="../../../public/image/closeIcon.svg"
+                src="/image/closeIcon.svg"
                 alt=""
                 className="w-[10px] h-[10px]"
               />

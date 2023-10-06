@@ -93,23 +93,23 @@ function Login() {
         </div>
 
         <img
-          src="../../public/Vector9.svg"
+          src="/Vector9.svg"
           className="absolute left-0 top-[330px]"
         />
         <img
-          src="../../public/Ellipse5.svg"
+          src="/Ellipse5.svg"
           className="absolute left-[80px] top-[80px]"
         />
         <img
-          src="../../public//Group5.svg"
+          src="//Group5.svg"
           className="absolute left-[180px] top-[190px]"
         />
         <img
-          src="../../public/Vector8.svg"
+          src="/Vector8.svg"
           className="absolute right-0 -top-[88px]"
         />
         <img
-          src="../../public/Ellipse4.svg"
+          src="/Ellipse4.svg"
           className="absolute right-[50px] top-[500px]"
         />
       </div>

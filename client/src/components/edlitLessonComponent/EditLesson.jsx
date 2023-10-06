@@ -17,7 +17,7 @@ function EditLesson(sharedState, updateState) {
   async function getDetailCourse() {
     try {
       const dataDetailCourse = await axios.get(
-        `http://localhost:4000/admin/editcourse/${courseid}`
+        `https://courseflow-production.up.railway.app/admin/editcourse/${courseid}`
       )
       setDataCourse({
         course_id: dataDetailCourse.data.data.course_id,

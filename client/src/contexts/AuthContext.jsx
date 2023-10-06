@@ -64,7 +64,7 @@ function AuthProvider(props) {
       localStorage.clear(), setIsLoggedIn(false), clearAllCookies();
       // (window.location.href = '/')
       // setUserID("");
-      // const response = await axios.get(`http://localhost:4000/auth/logout`);
+      // const response = await axios.get(`https://courseflow-production.up.railway.app/auth/logout`);
       // if (response.status === 200) {
       //   localStorage.clear();
       //   setIsLoggedIn(false);
@@ -122,7 +122,7 @@ function AuthProvider(props) {
   const login = async (userData) => {
     try {
       const result = await axios.post(
-        "http://localhost:4000/auth/login",
+        "https://courseflow-production.up.railway.app/auth/login",
         userData
       );
       if (result.data.message === "Email not confirmed") {
@@ -140,12 +140,12 @@ function AuthProvider(props) {
         localStorage.setItem("token", token);
         // setIsLoggedIn(true);
         // const response = await axios.get(
-        //   `http://localhost:4000/profile/${userID}`
+        //   `https://courseflow-production.up.railway.app/profile/${userID}`
         // );
         setTimeout(async () => {
           try {
             const response = await axios.get(
-              `http://localhost:4000/profile/${result.data.data[0].user_id}`
+              `https://courseflow-production.up.railway.app/profile/${result.data.data[0].user_id}`
             );
             const hasToken = !!localStorage.getItem("token");
             setUsername(response.data.data);
@@ -170,7 +170,7 @@ function AuthProvider(props) {
 
   const loginAdmin = async (loginData) => {
     const response = await axios.post(
-      "http://localhost:4000/authadmin/login",
+      "https://courseflow-production.up.railway.app/authadmin/login",
       loginData
     );
     try {

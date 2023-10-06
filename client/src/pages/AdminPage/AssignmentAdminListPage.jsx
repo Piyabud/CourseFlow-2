@@ -2,7 +2,7 @@ import AssignmentListAdmin from "../../components/adminAssignment/AssignmentList
 import AssignmentTopbar from "../../components/adminAssignment/AssignmentTopbar.jsx";
 import { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext.jsx";
-import ModalAssignmentDelete from "/components/adminAssignment/ModalAssignmentDelete.jsx"
+import ModalAssignmentDelete from "../../components/adminAssignment/ModalAssignmentDelete.jsx"
 import Sidebar from "../../components/Sidebar.jsx";
 
 function AssignmentAdminListPage() {

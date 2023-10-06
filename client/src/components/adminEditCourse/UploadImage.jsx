@@ -81,7 +81,7 @@ function UploadImage(props) {
           {/*---------------------- IMG THUMBNAIL UPLOAD -----------------------*/}
           {!props.getCoverImg && !avatarUrl ? (
             <img
-              src="../../../public/image/uploadImage.svg"
+              src="..//image/uploadImage.svg"
               className="relative bg-[--gray100] w-[358px] h-[358px] object-cover	rounded-2xl"
             />
           ) : null}
@@ -108,7 +108,7 @@ function UploadImage(props) {
               onClick={handleRemoveImage}
             >
               <img
-                src="../../../public/image/closeIcon.svg"
+                src="..//image/closeIcon.svg"
                 alt=""
                 className="w-[10px] h-[10px]"
               />

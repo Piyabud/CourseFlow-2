@@ -374,7 +374,7 @@ function AddLesson(sharedState, updateState) {
                               {/*---------------------- IMG THUMBNAIL UPLOAD -----------------------*/}
                               {!subLesson.subLessonVideo ? (
                                 <img
-                                  src="../../public/image/uploadVdo.svg"
+                                  src="/image/uploadVdo.svg"
                                   className="relative w-[250px] h-[250px] object-cover rounded-2xl"
                                 />
                               ) : null}
@@ -399,7 +399,7 @@ function AddLesson(sharedState, updateState) {
                                       }
                                     >
                                       <img
-                                        src="../../public/image/closeIcon.svg"
+                                        src="/image/closeIcon.svg"
                                         alt=""
                                         className="w-[10px] h-[10px]"
                                       />

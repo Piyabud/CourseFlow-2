@@ -4,7 +4,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
-import calendarIcon from "../../public/image/calendarIcon.svg";
+import calendarIcon from "/image/calendarIcon.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../contexts/AuthContext";
@@ -305,7 +305,7 @@ function UpdateProfile() {
                     ? avatarUrl
                     : image
                       ? image
-                      : "../public/image/noprofile.svg"
+                      : "/image/noprofile.svg"
                 }
                 className="relative w-[358px] h-[358px] object-cover	rounded-2xl	"
               />
@@ -372,7 +372,7 @@ function UpdateProfile() {
                   ) : null}
                   {formik.touched.full_name && formik.errors.full_name ? (
                     <img
-                      src="../../public/Exclamation-circle.svg"
+                      src="/Exclamation-circle.svg"
                       className="absolute right-[16px] top-[16px]"
                     />
                   ) : null}
@@ -429,7 +429,7 @@ function UpdateProfile() {
                   {formik.touched.date_of_birth &&
                     formik.errors.date_of_birth ? (
                     <img
-                      src="../../public/Exclamation-circle.svg"
+                      src="/Exclamation-circle.svg"
                       className="absolute right-[47px] top-[16px]"
                     />
                   ) : null}
@@ -461,7 +461,7 @@ function UpdateProfile() {
                   {formik.touched.edu_background &&
                     formik.errors.edu_background ? (
                     <img
-                      src="../../public/Exclamation-circle.svg"
+                      src="/Exclamation-circle.svg"
                       className="absolute right-[16px] top-[16px]"
                     />
                   ) : null}
@@ -491,7 +491,7 @@ function UpdateProfile() {
                   ) : null}
                   {formik.touched.email && formik.errors.email ? (
                     <img
-                      src="../../public/Exclamation-circle.svg"
+                      src="/Exclamation-circle.svg"
                       className="absolute right-[16px] top-[16px]"
                     />
                   ) : null}

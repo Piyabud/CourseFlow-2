@@ -306,7 +306,7 @@ function Learning() {
         <a
           onClick={() => navigate(-1)}
           className='flex flex-row justify-start items-center px-[8px] py-[4px] gap-[8px] cursor-pointer'>
-          <img src='../../public/image/arrow_back.svg' alt='arrow_back' />
+          <img src='/image/arrow_back.svg' alt='arrow_back' />
           <p className='text-[--blue500] font-[700] text-[16px]'>Back</p>
         </a>
       </div>

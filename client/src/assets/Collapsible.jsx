@@ -17,7 +17,7 @@ const Collapsible = (props) => {
         <button className="collapsible-title H3" onClick={toggleCollapsible}>
           {props.title}
         </button>
-        <img src="../../public/image/arrowDropDown.svg" alt="" />
+        <img src="/image/arrowDropDown.svg" alt="" />
       </div>
       <div
         className={`collapsible-content ${isOpen ? "show" : ""} `} //เช็คเงื่อนให้เพื่อกำหนดชื่อ class

@@ -1,5 +1,5 @@
 .canvas-ourCourse {
-  background-image: url("../../public/image/bg-headerOurCorse.svg");
+  background-image: url("/image/bg-headerOurCorse.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: start;

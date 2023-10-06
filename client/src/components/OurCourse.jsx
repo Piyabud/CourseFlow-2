@@ -93,7 +93,7 @@ function OurCourse() {
       <div className="topSection">
         <h2 className="H2">Our Courses</h2>
         <div className="input-container">
-          <img src="../../public/image/search.svg" alt="searchIcon" />
+          <img src="/image/search.svg" alt="searchIcon" />
           <input
             type="text"
             placeholder="Search..."

@@ -1,5 +1,5 @@
 import React from 'react'
-import EditLesson from '../../components/edlitLessonComponent/editLesson'
+import EditLesson from '../../components/edlitLessonComponent/EditLesson.jsx'
 import NavbarEditLesson from '../../components/edlitLessonComponent/NavbarEditLesson'
 import Sidebar from '../../components/Sidebar'
 

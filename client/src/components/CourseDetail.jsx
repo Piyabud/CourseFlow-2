@@ -278,7 +278,8 @@ function CourseDetail() {
               onClick={() => {
                 navigate(-1);
               }}
-              className="flex flex-row justify-start items-center px-[8px] py-[4px] gap-[8px] cursor-pointer">
+              className="flex flex-row justify-start items-center px-[8px] py-[4px] gap-[8px] cursor-pointer"
+            >
               <img src="../../public/image/arrow_back.svg" alt="arrow_back" />
               <p className="text-[--blue500] font-[700] text-[16px]">Back</p>
             </a>
@@ -287,7 +288,7 @@ function CourseDetail() {
             <div className="CourseDetail">
               <div className="vdo-preview rounded-[8px] w-[739px] h-[460px] cursor-pointer ">
                 <ReactPlayer
-                  url="https://yzcnxdhntdijwizusqmn.supabase.co/storage/v1/object/public/test-avatar/1%20Minute%20Sample%20Video.mp4?t=2023-09-08T15%3A26%3A51.001Z"
+                  url={dataDetail.video_trailer}
                   width="100%"
                   height="100%"
                   controls={true}
@@ -299,7 +300,8 @@ function CourseDetail() {
                       width="104"
                       height="104"
                       viewBox="0 0 104 104"
-                      fill="none">
+                      fill="none"
+                    >
                       <rect
                         width="104"
                         height="104"
@@ -336,7 +338,8 @@ function CourseDetail() {
                           expandIcon={<ExpandMoreIcon />}
                           aria-controls="panel1a-content"
                           id="panel1a-header"
-                          className="accordionSummary">
+                          className="accordionSummary"
+                        >
                           <div className="typography">
                             <div className="H3 text-[--gray700]">
                               {index < 10 ? "0" + (index + 1) : index + 1}
@@ -382,7 +385,8 @@ function CourseDetail() {
                 {isSubscribe ? null : (
                   <button
                     onClick={Boolean(userId) ? openDesire : noAuthHandle}
-                    className={`Secondary w-[100%] hidden`}>
+                    className={`Secondary w-[100%] hidden`}
+                  >
                     {isDesireExist
                       ? "Remove from Desire Course"
                       : "Get in Desire Course"}
@@ -433,7 +437,8 @@ function CourseDetail() {
                       noAuthHandle();
                     }
                   }}
-                  className="Primary w-[100%] border-none">
+                  className="Primary w-[100%] border-none"
+                >
                   {isSubscribe ? "Start Learning" : "Subscribe This Course"}
                 </button>
               </div>

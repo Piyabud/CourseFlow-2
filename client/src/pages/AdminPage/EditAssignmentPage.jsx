@@ -1,6 +1,6 @@
 import Sidebar from '../../components/Sidebar'
 import AssignmentField from '../../components/adminAssignment/AssignmentField'
-import ModalAssignmentDelete from '../../components/adminAssignment/modalAssignmentDelete'
+import ModalAssignmentDelete from '../../components/adminAssignment/ModalAssignmentDelete.jsx'
 import { useAuth } from '../../contexts/AuthContext'
 import { useParams } from 'react-router-dom'
 

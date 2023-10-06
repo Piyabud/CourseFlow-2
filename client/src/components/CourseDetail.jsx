@@ -78,7 +78,7 @@ function CourseDetail() {
   async function getDetailCourse() {
     try {
       const dataDetailCourse = await axios.get(
-        `http://localhost:4000/coursedetail/${param.id}`
+        `https://courseflow-production.up.railway.app/coursedetail/${param.id}`
       );
       setDataCourse(dataDetailCourse.data.data);
     } catch (error) {
@@ -90,7 +90,7 @@ function CourseDetail() {
   const checkDesire = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:4000/desire/?userId=${userId}&courseId=${param.id}`
+        `https://courseflow-production.up.railway.app/desire/?userId=${userId}&courseId=${param.id}`
       );
       setDesireData(result.data.data);
     } catch (error) {
@@ -101,7 +101,7 @@ function CourseDetail() {
   const checkSubscribe = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:4000/mycourse/?user_id=${userId}&course_id=${param.id}`
+        `https://courseflow-production.up.railway.app/mycourse/?user_id=${userId}&course_id=${param.id}`
       );
       setSubscribeData(result.data.data);
     } catch (error) {
@@ -122,7 +122,10 @@ function CourseDetail() {
     };
 
     try {
-      await axios.post(`http://localhost:4000/desire`, desireBody);
+      await axios.post(
+        `https://courseflow-production.up.railway.app/desire`,
+        desireBody
+      );
       setDesireToggle(false);
       setDesireData([1]);
       displaySnackbar("Desire course has been added!");
@@ -139,7 +142,7 @@ function CourseDetail() {
     setIsRequestPending(true);
     try {
       await axios.delete(
-        `http://localhost:4000/desire/?userId=${userId}&courseId=${param.id}`
+        `https://courseflow-production.up.railway.app/desire/?userId=${userId}&courseId=${param.id}`
       );
       setDesireToggle(false);
       setDesireData();
@@ -163,9 +166,12 @@ function CourseDetail() {
       course_id: param.id,
     };
     try {
-      await axios.post(`http://localhost:4000/mycourse/`, subscribe);
+      await axios.post(
+        `https://courseflow-production.up.railway.app/mycourse/`,
+        subscribe
+      );
       await axios.delete(
-        `http://localhost:4000/desire/?userId=${userId}&courseId=${param.id}`
+        `https://courseflow-production.up.railway.app/desire/?userId=${userId}&courseId=${param.id}`
       );
       setSubscribeToggle(false);
       displaySnackbar("Thank you for subscribing to our course!");
@@ -200,12 +206,15 @@ function CourseDetail() {
       localStorage.removeItem("videoKey");
       localStorage.setItem("course_id", param.id);
 
-      const result = await axios.get("http://localhost:4000/learn/videotime", {
-        params: {
-          userID: userId,
-          courseID: param.id,
-        },
-      });
+      const result = await axios.get(
+        "https://courseflow-production.up.railway.app/learn/videotime",
+        {
+          params: {
+            userID: userId,
+            courseID: param.id,
+          },
+        }
+      );
       const data = result.data.data;
       console.log(data);
       if (data !== undefined) {

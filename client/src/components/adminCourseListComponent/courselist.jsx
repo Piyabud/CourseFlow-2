@@ -25,7 +25,7 @@ function CourseList() {
   const courseFetching = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:4000/ourcourse?course=${searchBox}&start=${start}&end=${end}&desc&`
+        `https://courseflow-production.up.railway.app/ourcourse?course=${searchBox}&start=${start}&end=${end}&desc&`
       );
       setMaxpage(Math.ceil(result.data.count / 8));
       setCourseData(result.data.data);
@@ -82,7 +82,7 @@ function CourseList() {
   const handleDelete = async () => {
     if (targetCourseId) {
       try {
-        await axios.delete(`http://localhost:4000/ourcourse/${targetCourseId}`);
+        await axios.delete(`https://courseflow-production.up.railway.app/ourcourse/${targetCourseId}`);
 
         setTargetCourseName(null);
         setTargetCourseId(null);

@@ -8,7 +8,7 @@ function ModalAssignmentDelete(props) {
   const handleDelete = async () => {
     try {
       await axios.delete(
-        `http://localhost:4000/assignment/${deleteAssignment.assignment_id}`
+        `https://courseflow-production.up.railway.app/assignment/${deleteAssignment.assignment_id}`
       );
 
       setDeleteAssignment({

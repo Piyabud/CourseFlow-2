@@ -56,7 +56,7 @@ function AddLessonVideo() {
     setAvatarVdo({})
     setVdoUrl('')
     setVdo('')
-    // await axios.put(`http://localhost:4000/profile/delete/${userId}`);
+    // await axios.put(`https://courseflow-production.up.railway.app/profile/delete/${userId}`);
   }
   return (
     <>

@@ -18,7 +18,7 @@ function AssignmentPage() {
       setIsLoading(true)
       try {
         const response = await axios.get(
-          `http://localhost:4000/assignment/${userId}`
+          `https://courseflow-production.up.railway.app/assignment/${userId}`
         )
         setData(response.data.data)
 
@@ -102,23 +102,23 @@ function AssignmentPage() {
       }))
 
       const response = await axios.put(
-        `http://localhost:4000/assignment/${userId}?assignmentid=${assignment_id}`,
+        `https://courseflow-production.up.railway.app/assignment/${userId}?assignmentid=${assignment_id}`,
         assignmentAnswers
       )
 
       if (response.status === 200) {
         const updatedDataResponse = await axios.get(
-          `http://localhost:4000/assignment/${userId}`
+          `https://courseflow-production.up.railway.app/assignment/${userId}`
         )
 
         setData(updatedDataResponse.data.data)
       }
 
       await axios.put(
-        `http://localhost:4000/learn/complete?userID=${userId}&sublessonID=${sublessonId}`
+        `https://courseflow-production.up.railway.app/learn/complete?userID=${userId}&sublessonID=${sublessonId}`
       );
 
-      const result = await axios.get(`http://localhost:4000/learn/status?userID=${userId}&courseID=${courseId}`);
+      const result = await axios.get(`https://courseflow-production.up.railway.app/learn/status?userID=${userId}&courseID=${courseId}`);
 
       if (Number(result.data.percentComplete) === 100) {
         const statusCompleteBody = {
@@ -126,7 +126,7 @@ function AssignmentPage() {
           course_id: courseId,
         };
         await axios.post(
-          "http://localhost:4000/learn/status/",
+          "https://courseflow-production.up.railway.app/learn/status/",
           statusCompleteBody
         )
       }

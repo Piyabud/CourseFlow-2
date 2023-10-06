@@ -19,7 +19,7 @@ const AssignmentBox = (props) => {
     const getAssignmentData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/assignment/${userId}?sublessonid=${sublessonID}`
+          `https://courseflow-production.up.railway.app/assignment/${userId}?sublessonid=${sublessonID}`
         );
         setData(response.data.data);
 
@@ -71,26 +71,26 @@ const AssignmentBox = (props) => {
       }));
 
       const response = await axios.put(
-        `http://localhost:4000/assignment/${userId}?assignmentid=${assignment_id}`,
+        `https://courseflow-production.up.railway.app/assignment/${userId}?assignmentid=${assignment_id}`,
         assignmentAnswers
       );
 
       if (response.status === 200) {
         const updatedDataResponse = await axios.get(
-          `http://localhost:4000/assignment/${userId}?sublessonid=${sublessonID}`
+          `https://courseflow-production.up.railway.app/assignment/${userId}?sublessonid=${sublessonID}`
         );
 
         setData(updatedDataResponse.data.data);
       }
 
       await axios.put(
-        `http://localhost:4000/learn/complete?userID=${userId}&sublessonID=${sublessonID}`
+        `https://courseflow-production.up.railway.app/learn/complete?userID=${userId}&sublessonID=${sublessonID}`
       );
       const newStatus = { ...props.subStatus };
       newStatus[sublessonID] = "complete";
       props.setSubStatus(newStatus);
 
-      const result = await axios.get("http://localhost:4000/learn/status/", {
+      const result = await axios.get("https://courseflow-production.up.railway.app/learn/status/", {
         params: {
           userID: userId,
           courseID: localStorage.getItem("course_id"),
@@ -104,7 +104,7 @@ const AssignmentBox = (props) => {
           course_id: localStorage.getItem("course_id"),
         };
         await axios.post(
-          "http://localhost:4000/learn/status/",
+          "https://courseflow-production.up.railway.app/learn/status/",
           statusCompleteBody
         );
       }

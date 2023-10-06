@@ -43,7 +43,7 @@ function Register() {
   const sendRegisterRequest = async () => {
 
     try {
-      const result = await axios.post("http://localhost:4000/auth/register", registerData);
+      const result = await axios.post("https://courseflow-production.up.railway.app/auth/register", registerData);
       if (result.data.error) {
         setOpenSnackBar(false)
         setSnackbarMes(result.data.error)

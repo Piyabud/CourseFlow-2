@@ -65,7 +65,7 @@ function UpdateProfile() {
     setAvatar({});
     setAvatarUrl("");
     setImage("");
-    await axios.put(`http://localhost:4000/profile/delete/${userId}`);
+    await axios.put(`https://courseflow-production.up.railway.app/profile/delete/${userId}`);
   };
 
   const initialValues = {
@@ -76,7 +76,7 @@ function UpdateProfile() {
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   // const getData = async () => {
-  //   const result = await axios.get(`http://localhost:4000/profile/${userId}`);
+  //   const result = await axios.get(`https://courseflow-production.up.railway.app/profile/${userId}`);
 
   //   const initialValues = {
   //     full_name: result.data.data.full_name,
@@ -91,7 +91,7 @@ function UpdateProfile() {
   // // eslint-disable-next-line react-hooks/exhaustive-deps
   // const getDataImage = async () => {
   //   const imageUrl = await axios.get(
-  //     `http://localhost:4000/profile/image/${userId}`
+  //     `https://courseflow-production.up.railway.app/profile/image/${userId}`
   //   );
   //   setImage(imageUrl.data);
   // };
@@ -105,13 +105,13 @@ function UpdateProfile() {
       avatar: avatar,
     };
 
-    await axios.put(`http://localhost:4000/profile/${userId}`, newUserData, {
+    await axios.put(`https://courseflow-production.up.railway.app/profile/${userId}`, newUserData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
 
     try {
       const response = await axios.get(
-        `http://localhost:4000/profile/${userId}`
+        `https://courseflow-production.up.railway.app/profile/${userId}`
       );
       setUsername(response.data.data);
       localStorage.removeItem("username");
@@ -183,10 +183,10 @@ function UpdateProfile() {
     const fetchData = async () => {
       try {
         const result = await axios.get(
-          `http://localhost:4000/profile/${userId}`
+          `https://courseflow-production.up.railway.app/profile/${userId}`
         );
         const imageUrl = await axios.get(
-          `http://localhost:4000/profile/image/${userId}`
+          `https://courseflow-production.up.railway.app/profile/image/${userId}`
         );
 
         const initialValues = {
